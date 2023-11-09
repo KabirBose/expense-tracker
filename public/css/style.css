@@ -1,17 +1,17 @@
 /* css variables */
 :root {
-  --main-bg-color: #0b0c10;
+  --main-bg-color: #181a24;
   --secondary-bg-color: #1f2833;
   --main-text-color: #66fcf1;
-  --secondary-text-color: #c5c6c7;
+  --secondary-text-color: #ffffff;
   --element-color: #45a29e;
 }
 
 /* default styling */
 body {
   margin: 0;
-  background-color: rgb(0, 76, 255);
-  color: white;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
   font-family: "Sentient", serif;
 }
 
@@ -20,8 +20,49 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(38, 103, 255);
+  background-color: var(--secondary-bg-color);
 }
 nav h1 {
   font-weight: 300;
+}
+
+/* index */
+.index-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  height: 90vh;
+}
+.index-text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70%;
+}
+.index-heading {
+  font-size: 3rem;
+  margin-bottom: -5px;
+}
+.index-sub {
+  font-size: 1.5rem;
+}
+.index-img-container {
+  width: 30%;
+  height: 90vh;
+  background-image: url("../images/finance.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(100%) contrast(200%);
+}
+.index-get-started {
+  cursor: pointer;
+  background-color: var(--element-color);
+  color: var(--secondary-text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 7.5px;
+  border-radius: 1000px;
 }
