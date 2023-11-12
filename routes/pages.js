@@ -14,4 +14,8 @@ router.get("/new-expense", (req, res) => {
   res.render("new-expense");
 });
 
+router.get("/update-expense", (req, res) => {
+  res.render("update-expense");
+});
+
 module.exports = router;

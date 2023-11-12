@@ -46,7 +46,8 @@ footer {
 /* shared styles */
 .index-container,
 .expenses-container,
-.new-expense-container {
+.new-expense-container,
+.update-expense-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,16 +56,20 @@ footer {
 }
 .index-heading,
 .expenses-heading,
-.new-expense-heading {
+.new-expense-heading,
+.update-expense-heading {
   font-size: 3rem;
   margin-bottom: -5px;
 }
 .expenses-container,
-.new-expense-container {
+.new-expense-container,
+.update-expense-container {
   flex-direction: column;
 }
 .new-expense-input,
-.new-expense-description {
+.new-expense-description,
+.update-expense-input,
+.update-expense-description {
   width: 100%;
   font-size: 1.2rem;
   padding: 5px;
@@ -133,11 +138,13 @@ footer {
   cursor: pointer;
 }
 
-/* new expense */
-.new-expense-heading {
+/* new expense and update expense */
+.new-expense-heading,
+.update-expense-heading {
   margin-bottom: 30px;
 }
-.new-expense-form {
+.new-expense-form,
+.update-expense-form {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -145,13 +152,16 @@ footer {
   gap: 40px;
   width: 20rem;
 }
-.new-expense-input {
+.new-expense-input,
+.update-expense-input {
   height: 2rem;
 }
-.new-expense-description {
+.new-expense-description,
+.update-expense-description {
   height: 5rem;
 }
-.new-expense-btn {
+.new-expense-btn,
+.update-expense-btn {
   font-family: "Sentient", serif;
   cursor: pointer;
   width: 100%;

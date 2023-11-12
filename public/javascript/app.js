@@ -33,8 +33,6 @@ const getExpenses = async () => {
           method: "DELETE",
         };
 
-        console.log(url);
-
         btn.addEventListener("click", () => {
           fetch(url, options).then((response) => window.location.reload());
         });

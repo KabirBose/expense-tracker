@@ -1,0 +1,30 @@
+<div class="update-expense-container">
+  <h1 class="update-expense-heading">Update an Expense</h1>
+  <form class="update-expense-form" method="post" action="/api/expenses/">
+    <input
+      placeholder="Expense id"
+      class="update-expense-input"
+      name="_id"
+      type="text"
+    />
+    <input
+      placeholder="Expense name"
+      class="update-expense-input"
+      name="name"
+      type="text"
+    />
+    <input
+      placeholder="Expense price (numbers only)"
+      class="update-expense-input"
+      name="price"
+      type="number"
+    />
+    <textarea
+      placeholder="Expense description (max 25 characters)"
+      class="update-expense-description"
+      name="description"
+      maxlength="25"
+    ></textarea>
+    <button class="update-expense-btn" type="submit">Submit</button>
+  </form>
+</div>
