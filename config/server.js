@@ -27,6 +27,8 @@ mongoDB.once("open", () => {
 
 // routes
 app.use("/", pagesRouter);
+
+app.use(express.json());
 app.use("/api", apiRouter);
 
 app.listen(port, () => {
