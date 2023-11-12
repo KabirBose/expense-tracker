@@ -28,6 +28,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/expenses", (req, res) => {
+  res.render("expenses");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
 });

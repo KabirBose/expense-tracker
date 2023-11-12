@@ -32,24 +32,28 @@ nav a {
   font-size: 1.2rem;
 }
 
-/* index */
-.index-container {
+/* shared styles */
+.index-container,
+.expenses-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0;
   height: 90vh;
 }
+.index-heading,
+.expenses-heading {
+  font-size: 3rem;
+  margin-bottom: -5px;
+}
+
+/* index */
 .index-text-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   width: 70%;
-}
-.index-heading {
-  font-size: 3rem;
-  margin-bottom: -5px;
 }
 .index-sub {
   font-size: 1.5rem;
@@ -63,7 +67,7 @@ nav a {
   background-size: cover;
   filter: grayscale(100%) contrast(200%);
 }
-.index-get-started {
+.index-btn {
   cursor: pointer;
   background-color: var(--element-color);
   color: var(--secondary-text-color);
@@ -71,4 +75,12 @@ nav a {
   font-size: 1.5rem;
   padding: 7.5px;
   border-radius: 1000px;
+}
+
+/* expenses */
+.expenses-container {
+  flex-direction: column;
+}
+.expenses-heading {
+  margin-bottom: 10px;
 }
