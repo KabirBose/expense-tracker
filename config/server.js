@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
 
 const DB = require("../config/db");
+const Expense = require("../models/Expense");
 
 const app = express();
 const port = 3000;
@@ -28,8 +29,15 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/expenses", (req, res) => {
-  res.render("expenses");
+app.get("/expenses", async (req, res) => {
+  try {
+    const expenses = await Expense.find();
+    console.log(expenses);
+    res.render("expenses");
+  } catch (err) {
+    console.log(err);
+    res.send("Could not load data from DB");
+  }
 });
 
 app.listen(port, () => {
