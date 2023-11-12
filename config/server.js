@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
 
 const DB = require("../config/db");
-const Expense = require("../models/Expense");
+const pagesRouter = require("../routes/pages");
 
 const app = express();
 const port = 3000;
@@ -25,20 +25,7 @@ mongoDB.once("open", () => {
 });
 
 // routes
-app.get("/", (req, res) => {
-  res.render("index");
-});
-
-app.get("/expenses", async (req, res) => {
-  try {
-    const expenses = await Expense.find();
-    console.log(expenses);
-    res.render("expenses");
-  } catch (err) {
-    console.log(err);
-    res.send("Could not load data from DB");
-  }
-});
+app.use("/", pagesRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);
