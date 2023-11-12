@@ -70,6 +70,7 @@ footer {
   padding: 5px;
   border-radius: 5px;
   border: none;
+  font-family: "Sentient", serif;
 }
 
 /* index */
@@ -92,12 +93,32 @@ footer {
 
 /* expenses */
 .expenses-heading {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 .expenses-list p {
   color: white;
   font-size: 1.2rem;
   list-style: none;
+}
+.expense {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  line-height: 5px;
+  background-color: var(--secondary-bg-color);
+  padding: 10px;
+  border-radius: 10px;
+  min-width: 20rem;
+  margin-bottom: 20px;
+}
+.expense-description {
+  font-weight: 200;
+  color: var(--secondary-text-color);
+}
+.expense-price {
+  font-size: 1.75rem;
+  color: var(--secondary-text-color);
 }
 
 /* new expense */
@@ -119,6 +140,7 @@ footer {
   height: 5rem;
 }
 .new-expense-btn {
+  font-family: "Sentient", serif;
   cursor: pointer;
   width: 100%;
   height: 3rem;
