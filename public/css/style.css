@@ -20,10 +20,16 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
   background-color: var(--secondary-bg-color);
 }
 nav h1 {
   font-weight: 300;
+}
+nav a {
+  text-decoration: none;
+  color: var(--secondary-text-color);
+  font-size: 1.2rem;
 }
 
 /* index */
