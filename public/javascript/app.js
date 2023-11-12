@@ -11,7 +11,12 @@ const getExpenses = async () => {
     <div class="expense">
         <div>
             <h3 class="expense-name">${expense.name}</h3>
-            <h3 class="expense-description">${expense.description}</h3>
+            ${
+              expense.description !== undefined
+                ? `<h3 class="expense-description">${expense.description}</h3>`
+                : `<h3></h3>`
+            }
+            <h3 class="expense-id">id: ${expense._id}</h3>
         </div>
         <h3 class="expense-price">$${expense.price}</h3>
     </div>
