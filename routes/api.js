@@ -35,19 +35,40 @@ router.post("/expenses", async (req, res) => {
       })
       .status(200);
   } catch (error) {
-    res
-      .json({
-        error,
-      })
-      .status(500);
+    res.json({ error }).status(500);
   }
 });
 
-// router.delete("/expenses", async (req, res) => {
-//   const id = req.body;
-//   console.log(id);
-//   res.json({ id });
-//   //   const expense = await Expense.findByIdAndDelete();
-// });
+// delete route
+router.delete("/expenses/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const expense = await Expense.findByIdAndDelete(id);
+    res
+      .json({
+        data: expense,
+        success: true,
+      })
+      .status(200);
+  } catch (error) {
+    res.json({ error }).status(500);
+  }
+});
+
+// update route
+router.patch("/expenses/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const expense = await Expense.findByIdAndUpdate(id, req.body);
+    res
+      .json({
+        data: expense,
+        success: true,
+      })
+      .status(200);
+  } catch (error) {
+    res.json({ error }).status(500);
+  }
+});
 
 module.exports = router;
