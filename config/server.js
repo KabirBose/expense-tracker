@@ -5,6 +5,7 @@ const expressLayouts = require("express-ejs-layouts");
 
 const DB = require("../config/db");
 const pagesRouter = require("../routes/pages");
+const apiRouter = require("../routes/api");
 
 const app = express();
 const port = 3000;
@@ -26,6 +27,7 @@ mongoDB.once("open", () => {
 
 // routes
 app.use("/", pagesRouter);
+app.use("/api", apiRouter);
 
 app.listen(port, () => {
   console.log(`Example app listening on port http://localhost:${port}`);

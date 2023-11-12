@@ -1,5 +1,4 @@
 const express = require("express");
-const mongoose = require("mongoose");
 const Expense = require("../models/Expense");
 
 const router = express.Router();
