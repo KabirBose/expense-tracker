@@ -32,6 +32,14 @@ nav a {
   font-size: 1.2rem;
 }
 
+/* footer */
+footer {
+  background-color: var(--secondary-bg-color);
+  color: var(--main-text-color);
+  text-align: center;
+  padding: 5px;
+}
+
 /* shared styles */
 .index-container,
 .expenses-container {
@@ -39,7 +47,7 @@ nav a {
   justify-content: center;
   align-items: center;
   gap: 0;
-  height: 90vh;
+  min-height: 90vh;
 }
 .index-heading,
 .expenses-heading {
@@ -49,23 +57,11 @@ nav a {
 
 /* index */
 .index-text-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 70%;
+  text-align: center;
 }
 .index-sub {
   font-size: 1.5rem;
-}
-.index-img-container {
-  width: 30%;
-  height: 90vh;
-  background-image: url("../images/finance.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  filter: grayscale(100%) contrast(200%);
+  color: var(--secondary-text-color);
 }
 .index-btn {
   cursor: pointer;
