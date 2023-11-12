@@ -27,13 +27,8 @@ router.get("/expenses", async (req, res) => {
 router.post("/expenses", async (req, res) => {
   try {
     const { name, price, description } = req.body;
-    const expense = await Expense.create({ name, price, description });
-    res
-      .json({
-        data: expense,
-        success: true,
-      })
-      .status(200);
+    await Expense.create({ name, price, description });
+    res.redirect("/expenses");
   } catch (error) {
     res.json({ error }).status(500);
   }

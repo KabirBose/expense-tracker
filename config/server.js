@@ -2,6 +2,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
+const bodyParser = require("body-parser");
 
 const DB = require("../config/db");
 const pagesRouter = require("../routes/pages");
@@ -12,12 +13,13 @@ const port = 3000;
 
 // middleware
 app.use(express.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(expressLayouts);
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "public/css"));
+app.use("/javascript", express.static(__dirname + "public/javascript"));
 app.set("view engine", "ejs");
 
-// db
 // connect to DB
 mongoose.connect(DB.URI);
 let mongoDB = mongoose.connection;

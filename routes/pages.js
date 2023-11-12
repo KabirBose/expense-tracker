@@ -10,4 +10,8 @@ router.get("/expenses", (req, res) => {
   res.render("expenses");
 });
 
+router.get("/new-expense", (req, res) => {
+  res.render("new-expense");
+});
+
 module.exports = router;
