@@ -109,7 +109,7 @@ footer {
   background-color: var(--secondary-bg-color);
   padding: 10px;
   border-radius: 10px;
-  min-width: 20rem;
+  min-width: 30rem;
   margin-bottom: 20px;
 }
 .expense-description {
@@ -124,6 +124,13 @@ footer {
 .expense-price {
   font-size: 1.75rem;
   color: var(--secondary-text-color);
+}
+.expense-delete-btn {
+  background-color: rgb(0, 0, 0, 0);
+  border: none;
+  font-size: 2rem;
+  font-family: "Sentient", serif;
+  cursor: pointer;
 }
 
 /* new expense */

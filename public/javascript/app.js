@@ -19,9 +19,26 @@ const getExpenses = async () => {
             <h3 class="expense-id">id: ${expense._id}</h3>
         </div>
         <h3 class="expense-price">$${expense.price}</h3>
+        <button class="expense-delete-btn" data-id=${expense._id}>🗑️</button>
     </div>
     `;
       expensesList.insertAdjacentHTML("beforebegin", html);
+
+      let deleteBtns = document.querySelectorAll(".expense-delete-btn");
+      deleteBtns.forEach((btn) => {
+        let url = `http://localhost:3000/api/expenses/${btn.getAttribute(
+          "data-id"
+        )}`;
+        let options = {
+          method: "DELETE",
+        };
+
+        console.log(url);
+
+        btn.addEventListener("click", () => {
+          fetch(url, options).then((response) => window.location.reload());
+        });
+      });
     });
   } catch (error) {
     console.error(`Failed to reach server, ${err}`);
