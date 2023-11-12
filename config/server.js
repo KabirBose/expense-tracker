@@ -11,6 +11,7 @@ const app = express();
 const port = 3000;
 
 // middleware
+app.use(express.json());
 app.use(expressLayouts);
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "public/css"));
@@ -27,8 +28,6 @@ mongoDB.once("open", () => {
 
 // routes
 app.use("/", pagesRouter);
-
-app.use(express.json());
 app.use("/api", apiRouter);
 
 app.listen(port, () => {
