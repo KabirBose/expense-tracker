@@ -24,16 +24,16 @@ const getExpenses = async () => {
     `;
       expensesList.insertAdjacentHTML("beforebegin", html);
 
-      let deleteBtns = document.querySelectorAll(".expense-delete-btn");
-      deleteBtns.forEach((btn) => {
-        let url = `http://localhost:3000/api/expenses/${btn.getAttribute(
+      // add delete functionality to all expenses
+      let cans = document.querySelectorAll(".expense-delete-btn");
+      cans.forEach((can) => {
+        let url = `http://localhost:3000/api/expenses/${can.getAttribute(
           "data-id"
         )}`;
         let options = {
           method: "DELETE",
         };
-
-        btn.addEventListener("click", () => {
+        can.addEventListener("click", () => {
           fetch(url, options).then((response) => window.location.reload());
         });
       });
