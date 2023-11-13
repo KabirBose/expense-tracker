@@ -1,3 +1,9 @@
+# How to install all npm modules
+
+1. go to terminal in this directory
+2. type "npm init"
+3. type "npm install"
+
 # How to run development server
 
 1. open terminal
