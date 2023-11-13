@@ -7,8 +7,11 @@
 # How to run development server
 
 1. open terminal
-2. use "npm dev"
+2. use "npm run dev"
 3. go to "http://localhost:3000"
+4. go to ./public/javascript/renderController.js
+5. change line 13 from PROD_URL to DEV_URL
+6. change line 42 from PROD_URL to DEV_URL
 
 # How to view documents in DB
 

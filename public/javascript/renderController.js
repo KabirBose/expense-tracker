@@ -2,14 +2,15 @@
 const expensesHeading = document.querySelector(".expenses-heading");
 const expensesList = document.querySelector(".expenses-list");
 
+const PROD_URL = "https://fantastic-kerchief-deer.cyclic.app/api/expenses";
+const DEV_URL = "http://localhost:3000";
+
 // create an asynchronous GET request to my api
 const getExpenses = async () => {
   // wrapped in a try-catch block in case of errors
   try {
     // fetch the data and convert it into json
-    const response = await fetch(
-      "https://fantastic-kerchief-deer.cyclic.app/api/expenses"
-    );
+    const response = await fetch(PROD_URL);
     const { data } = await response.json();
 
     // map through the data and return the following html
@@ -38,9 +39,7 @@ const getExpenses = async () => {
       let cans = document.querySelectorAll(".expense-delete-btn");
       // each delete button (can) in the html above can complete a delete request to the following API route given the id
       cans.forEach((can) => {
-        let url = `https://fantastic-kerchief-deer.cyclic.app/api/expenses/${can.getAttribute(
-          "data-id"
-        )}`;
+        let url = `${PROD_URL}/${can.getAttribute("data-id")}`;
         let options = {
           method: "DELETE",
         };
