@@ -44,6 +44,7 @@ router.delete("/expenses/:id", async (req, res) => {
     res
       .json({
         data: expense,
+        message: "this document has been successfully deleted",
         success: true,
       })
       .status(200);
