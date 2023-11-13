@@ -1,3 +1,5 @@
+// these are the routes that allow users to go to different webpages by rendering the appropriate ejs file(s)
+
 const express = require("express");
 
 const router = express.Router();

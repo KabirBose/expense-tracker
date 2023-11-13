@@ -1,24 +1,33 @@
+<!-- a form to create a post method when submitted -->
+
 <div class="new-expense-container">
   <h1 class="new-expense-heading">Create a new expense</h1>
+
+  <!-- a form that posts to the /api/expenses route -->
   <form class="new-expense-form" method="post" action="/api/expenses">
+    <!-- asks for the name as text -->
     <input
       placeholder="Expense name"
       class="new-expense-input"
       name="name"
       type="text"
     />
+    <!-- asks for the price as number -->
     <input
       placeholder="Expense price (numbers only)"
       class="new-expense-input"
       name="price"
       type="number"
     />
+    <!-- asks for a description with max 25 characters as text -->
     <textarea
       placeholder="Expense description (max 25 characters)"
       class="new-expense-description"
       name="description"
       maxlength="25"
     ></textarea>
+
+    <!-- a submit button -->
     <button class="new-expense-btn" type="submit">Add Expense</button>
   </form>
 </div>

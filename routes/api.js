@@ -1,3 +1,5 @@
+// these are routes that can be reached to perform CRUD operations
+
 const express = require("express");
 const Expense = require("../models/Expense");
 
