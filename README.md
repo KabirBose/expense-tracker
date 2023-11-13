@@ -7,7 +7,7 @@
 # How to run development server
 
 1. open terminal
-2. use "npm start"
+2. use "npm dev"
 3. go to "http://localhost:3000"
 
 # How to view documents in DB
