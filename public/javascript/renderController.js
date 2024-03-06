@@ -2,7 +2,6 @@
 const expensesHeading = document.querySelector(".expenses-heading");
 const expensesList = document.querySelector(".expenses-list");
 
-const PROD_URL = "https://fantastic-kerchief-deer.cyclic.app/api/expenses";
 const DEV_URL = "http://localhost:3000";
 
 // create an asynchronous GET request to my api

@@ -1,20 +1,15 @@
-# How to install all npm modules
+# Expense Tracker
 
-1. go to terminal in this directory
-2. type "npm init"
-3. type "npm install"
+### By Kabir Bose
 
-# How to run development server
+# Purpose
 
-1. open terminal
-2. use "npm run dev"
-3. go to "http://localhost:3000"
-4. go to ./public/javascript/renderController.js
-5. change line 13 from PROD_URL to DEV_URL
-6. change line 42 from PROD_URL to DEV_URL
+This is an expense tracker application that allows users to store and edit their expenses. Users can track all of their expenses, ensuring that they stay healthy and wealthy (or atleast wealthy)!
 
-# How to view documents in DB
+# Setup
 
-1. go to Postman
-2. do a GET request to the following url
-3. http://localhost:3000/api/expenses
+1. Download the project from GitHub
+2. Enter the project directory through your terminal
+3. In your terminal enter `npm i` to install all packages
+4. Run the program using `npm start`
+5. Enjoy your workouts!
